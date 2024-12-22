@@ -9,6 +9,7 @@
 #include "freertos/queue.h"
 #include "driver/gpio.h"
 
+// In order for the definitions to be recognized we need to edit the configuration file(see sdkconfig)
 #define GPIO_OUTPUT_IO_3    CONFIG_GPIO_OUTPUT_3
 #define GPIO_OUTPUT_PIN_SEL  1ULL<<GPIO_OUTPUT_IO_3
 
