@@ -1,0 +1,23 @@
+# put here your custom config value
+menu "Example Configuration"
+
+config GPIO_OUTPUT_3
+        int "GPIO output pin 3"
+        range 0 18
+        default 8 if IDF_TARGET_ESP32C2 || IDF_TARGET_ESP32H2 || IDF_TARGET_ESP32C5
+        default 3
+        help
+            GPIO pin number to be used as GPIO_OUTPUT_IO_0.
+
+config ESP_WIFI_SSID
+    string "WiFi SSID"
+    default "myssid"
+    help
+	SSID (network name) for the example to connect to.
+
+config ESP_WIFI_PASSWORD
+    string "WiFi Password"
+    default "mypassword"
+    help
+	WiFi password (WPA or WPA2) for the example to use.
+endmenu
